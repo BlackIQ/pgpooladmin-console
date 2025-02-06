@@ -102,7 +102,7 @@ const Index = () => {
                 Server Alias: {server.alias}
               </Typography>
               <Chip
-                label={`Version: ${poolVersion[0].pool_version}`}
+                label={`Version: ${poolVersion[0]?.pool_version}`}
                 color="info"
                 size="medium"
                 sx={{
