@@ -12,7 +12,6 @@ import {
   Button,
   Pagination,
   colors,
-  Chip,
 } from "@mui/material";
 
 import { format as dateFormat } from "date-fns";
@@ -29,7 +28,7 @@ import { tables } from "@/config";
 
 import { useEffect, useState } from "react";
 
-import { useToast } from "@/hooks";
+// import { useToast } from "@/hooks";
 
 const TableComponent = ({
   table,
@@ -43,7 +42,7 @@ const TableComponent = ({
   addItems,
   details,
 }) => {
-  const toast = useToast();
+  // const toast = useToast();
 
   const formatterData = dateFormat;
 
@@ -60,7 +59,7 @@ const TableComponent = ({
     });
 
   const [page, setPage] = useState(1);
-  const [rowsPerPage, setRowPerPage] = useState(10);
+  const [rowsPerPage, setRowPerPage] = useState(100);
 
   const [renderRows, setRenderRows] = useState([]);
 
