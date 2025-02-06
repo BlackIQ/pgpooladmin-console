@@ -34,6 +34,7 @@ import {
   Groups,
   Warning,
   Logout,
+  QueryStatsOutlined,
 } from "@mui/icons-material";
 
 import { useToast } from "@/hooks";
@@ -114,7 +115,7 @@ const AppLayout = ({ children }) => {
     try {
       const data = await single(user._id);
 
-      const nuser = { ...data.user, docs: data.docs };
+      const nuser = { ...data.user };
 
       setPermissions(data.user.role.permissions);
 
@@ -159,6 +160,8 @@ const AppLayout = ({ children }) => {
         return <Key />;
       case "users":
         return <Groups />;
+      case "monitors":
+        return <QueryStatsOutlined />;
       case "logout":
         return <Logout sx={{ color: "error.main" }} />;
       default:
@@ -234,7 +237,7 @@ const AppLayout = ({ children }) => {
                       m: open && 1,
                       borderRadius: open ? 2 : 0,
                       backgroundColor:
-                        history.pathname === `/panel/${permission.value}` &&
+                        history.pathname.split("/")[2] === permission.value &&
                         "#444",
                     }}
                   >
