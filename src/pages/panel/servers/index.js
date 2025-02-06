@@ -1,6 +1,7 @@
 // NextJS ReactJs
 import { useState, useEffect } from "react";
 import Head from "next/head";
+import { useRouter } from "next/navigation";
 
 // Redux
 import { useSelector } from "react-redux";
@@ -15,15 +16,14 @@ import { Table, Loading } from "@/components";
 import { useDisclosure, useToast } from "@/hooks";
 
 // APIs
-import {
-  all as allServers,
-  deleteOne as deleteServer,
-} from "@/api/services/server";
+import { all as allServers } from "@/api/services/server";
 
 // Forms
 import ServerForm from "@/forms/server";
 
 const Index = () => {
+  const router = useRouter();
+
   const [servers, serServers] = useState([]);
 
   const [loading, setLoading] = useState(true);
@@ -61,24 +61,6 @@ const Index = () => {
     setLoading(false);
   };
 
-  const deleteData = async () => {
-    setLoading(true);
-
-    try {
-      await deleteServer(currentData._id);
-
-      toast("Server deleted");
-
-      handleConfirm();
-      setCurrentData({});
-      getData();
-    } catch (error) {
-      toast(error.message);
-    }
-
-    setLoading(false);
-  };
-
   return (
     <>
       <Head>
@@ -94,12 +76,13 @@ const Index = () => {
               setCurrentData(null);
               handleDialog();
             }}
-            clk={(data) => {
+            upd={(data) => {
               const d = { ...data };
 
               setCurrentData(d);
               handleDialog();
             }}
+            clk={(data) => router.push(`/panel/monitors/${data._id}`)}
           />
         ) : (
           <Loading />
