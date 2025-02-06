@@ -7,6 +7,7 @@ const urls = {
   role: "roles",
   user: "users",
   server: "servers",
+  monitor: "monitors",
 };
 
 export default urls;
