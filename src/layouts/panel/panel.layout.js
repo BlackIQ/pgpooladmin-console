@@ -289,8 +289,19 @@ const AppLayout = ({ children }) => {
                   textAlign: "center",
                 }}
               >
-                <Typography variant="body2" color="primary">
-                  Console Version {appConfig.version}
+                <Typography
+                  variant="h6"
+                  fontWeight="bold"
+                  color="primary"
+                  gutterBottom
+                >
+                  pgPoolAdmin
+                </Typography>
+                <Typography variant="body2" gutterBottom>
+                  Cloud Console
+                </Typography>
+                <Typography variant="caption" gutterBottom>
+                  {appConfig.version}
                 </Typography>
               </Box>
             </Box>
