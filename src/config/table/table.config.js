@@ -34,6 +34,14 @@ const tables = {
       "role.label": "Role",
     },
   },
+  pgpool_status: {
+    title: "Pool Status",
+    fields: {
+      item: "Item",
+      value: "Value",
+      description: "Description",
+    },
+  },
 };
 
 export default tables;
