@@ -24,6 +24,7 @@ const tables = {
       username: "Username",
       password: "Password",
       database: "Database",
+      update: "Edit",
     },
   },
   user: {
