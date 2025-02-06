@@ -82,7 +82,7 @@ const Index = () => {
   return (
     <>
       <Head>
-        <title>Servers - pgPoolAdmin Console</title>
+        <title>Servers - Postgres Pool Admin | Console</title>
       </Head>
       <Box>
         {!loading ? (

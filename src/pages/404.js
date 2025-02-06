@@ -8,7 +8,7 @@ const NotFound = () => {
   return (
     <>
       <Head>
-        <title>404 - OpenHubble Console</title>
+        <title>404 - Postgres Pool Admin | Console</title>
       </Head>
       <Box
         sx={{

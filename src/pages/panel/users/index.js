@@ -59,7 +59,7 @@ const Index = () => {
   return (
     <>
       <Head>
-        <title>Users - OpenHubble Console</title>
+        <title>Users - Postgres Pool Admin | Console</title>
       </Head>
       <Box>
         {!loading ? (

@@ -64,7 +64,7 @@ const Auth = () => {
   return (
     <>
       <Head>
-        <title>Authentication - OpenHubble Console</title>
+        <title>Authentication - Postgres Pool Admin | Console</title>
       </Head>
       <Container maxWidth="xs">
         <Box

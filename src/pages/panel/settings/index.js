@@ -75,7 +75,7 @@ const Index = () => {
   return (
     <>
       <Head>
-        <title>Settings - OpenHubble Console</title>
+        <title>Settings - Postgres Pool Admin | Console</title>
       </Head>
       <Container>
         <Grid container spacing={4}>

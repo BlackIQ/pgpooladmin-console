@@ -6,7 +6,7 @@ const Index = () => {
   return (
     <>
       <Head>
-        <title>Panel - OpenHubble Console</title>
+        <title>Panel - Postgres Pool Admin | Console</title>
       </Head>
 
       <Box>Nothing</Box>

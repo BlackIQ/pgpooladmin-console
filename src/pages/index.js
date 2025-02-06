@@ -10,12 +10,12 @@ export default function Index() {
   return (
     <>
       <Head>
-        <title>pgPoolAdmin Console</title>
+        <title>Postgres Pool Admin | Console</title>
       </Head>
       <Container maxWidth="lg">
         <Toolbar />
         <Typography color="primary" variant="h2" fontWeight="bold" gutterBottom>
-          pgPoolAdmin Console
+          Postgres Pool Admin | Console
         </Typography>
         <Typography
           color="secondary"
