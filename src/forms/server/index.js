@@ -56,7 +56,7 @@ const ServerForm = ({
     setLoading(false);
   };
 
-  const updateData = async (data) => {
+  const updateData = async (callback) => {
     setLoading(true);
 
     if (callback.port <= 0 || callback.port > 65535) {
@@ -66,7 +66,7 @@ const ServerForm = ({
     }
 
     try {
-      await updateServer(data._id, data);
+      await updateServer(callback._id, callback);
 
       toast("Server updated");
       handleClose();
